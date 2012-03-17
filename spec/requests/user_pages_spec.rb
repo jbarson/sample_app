@@ -47,7 +47,7 @@ describe "User pages" do
       it "should create a user" do
         expect do
           click_button "Create my account"
-        end.to change(User, :count).by(1)
+        end.to change(User, :count).by(1) 
       end
 
       describe "after saving the user" do
@@ -56,7 +56,13 @@ describe "User pages" do
 
         it { should have_selector('title', text: user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+<<<<<<< HEAD
       end
+=======
+        it { should have_link('Sign out') }
+      end
+      
+>>>>>>> sign-in-out
     end
   end
 end
